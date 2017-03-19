@@ -16,21 +16,27 @@
 	<title>TrojanHacks pt.2</title>
 
 	<style>
-
 		body {
-			font-family: 'Lato', sans-serif;
-			background-image: url('img/la.jpeg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-attachment: fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+			margin: 0;
+			padding: 0;
+			font-family: lato;
+			overflow-x: hidden;
 		}
 		.intro {
+			color: white;
+			height: 100vh;
+			width: 100%;
+		    color: white;
+		}
+
+		@keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		.top-info {
 			position: absolute;
+			width: 100%;
 			top: 44%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -39,21 +45,23 @@
 		 	-ms-animation: fadein 1.5s; /* Internet Explorer */
 		    -o-animation: fadein 1.5s; /* Opera < 12.1 */
 		    animation: fadein 1.5s;
-		    color: white;
 		}
-
-		@keyframes fadein {
-		    from { opacity: 0; }
-		    to   { opacity: 1; }
+		.cover {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			background: url('img/la.jpeg') center no-repeat;
+			background-size: cover;
+			z-index: -1;
 		}
 		#presents {
+			margin-top: 0;
 			margin-bottom: 10px;
 		}
 		#title {
 			font-size: 70px;
 		}
 		#slogan {
-			margin: 10px;
 			font-size: 35px;
 			margin-bottom: 30px;
 		}
@@ -78,39 +86,293 @@
 			color: #7F5040;
 
 		}
-		#bottom {
-			position: absolute;
-			top: 88%;
-			left: 50%;
-			font-size: 18px;
-			transform: translateX(-50%);
+		.schedule {
+			padding: 50px 10px;
+			color: black;
+			background-color: white;
+		}
+		.day {
+			color: #A32F00;
+			font-weight: bold;
+		}
+		.location {
+			color: #6F2F11;
+			font-weight: bold;
+			padding-bottom: 10px;
+		}
+		.schedule p {
+			font-size: 16px;
+		}
+		th {
+			padding: 5px 30px;
+		}
+		table {
+			margin: auto;
+		}
+		.workshops {
+			margin-top: 75px;
+			padding: 50px 10px;
 			color: white;
+			background: red; 
+			background: -webkit-linear-gradient(top left, #DB7737, #56243B);
+			background: -o-linear-gradient(top left, #DB8156, #56243B);
+			background: linear-gradient(top bottom right, #DB8156, #56243B);
+		}
+		.ws-inner {
+			padding: 10px;
+			border: 2px solid white;
+			margin: 20px;
+			transition: .3s;
+			height: 310px;
+		}
+		.ws-inner:hover {
+			transform: scale(1.05);
+		}
+		.ws-outer {
+			margin: 0 20px;
+		}
+		.workshop-images {
+			height: 100px;
+			padding-bottom: 20px;
+		}
+		.prizes h1 {
+			color: #6F2F11;
+			font-weight: bold;
+		}
+		.prizes h2 {
+			color: white;
+		}
+		.prizes {
+			margin-top: 75px;
+			background-color: white;
+			padding: 50px 20px;
+		}
+		.p-outer {
+			margin-top: 20px;
+			margin-bottom:70px;
+			background-color: #C56541;
+			height: 550px;
 
-			-webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-		    -moz-animation: fadein 1.5s; /* Firefox < 16 */
-		 	-ms-animation: fadein 1.5s; /* Internet Explorer */
-		    -o-animation: fadein 1.5s; /* Opera < 12.1 */
-		    animation: fadein 1.5s;
-		    color: white;
+		}
+		.p-inner {
+			padding: 15px;
+			background-color: #C56541;
+			border: 20px solid white;
+			margin: -10px -35px;
+			height:200px;
+			transition: .4s;
+			color: white;
+		}
+		.footer {
+			margin-top: 75px;
+			padding: 100px 10px;
+			padding-bottom: 300px;
+			background-color: #3F2E48;
+			color: white;
 		}
 
+		.final-fight-on {
+			font-size: 80px;
+		}
+		.p-inner:hover {
+			background-color: #AA4A2B;
+		}
+
+		.link-icons {
+			height: 50px;
+			transition: .5s;
+		}
+		.link-icons:hover {
+			transform: scale(1.1);
+		}
 
 	</style>
 
 </head>
 
 <body>
-	<div class="intro text-center container-fluid">
-		<h3 id="presents">USC ACM Presents...</h3>
-		<h1 id="title"><b>TrojanHacks Pt. </b><i class="fa fa-hand-peace-o"></i></h1>
-		<h2 id="slogan"><b>"Hack on, for ol's SC"</b></h2>
-		<a id="apply-button" href="https://uscacm.typeform.com/to/Ob0THW" type="button">Apply Now</a>	
-		<div class="info">
-			<h4>March 25 to March 26</h4>
+	<section class="intro text-center">
+		<section class="cover"></section>
+		<section class="top-info">
+			<h3 id="presents">USC ACM Presents...</h3>
+			<h1 id="title"><b>TrojanHacks Pt. </b><i class="fa fa-hand-peace-o"></i></h1>
+			<h2 id="slogan"><b>"Hack on, for ol's SC"</b></h2>
+			<a id="apply-button" href="https://uscacm.typeform.com/to/Ob0THW" type="button">Apply Now</a>
+		</section>
+	</section>
+
+	<section class="schedule text-center">
+		<h1 class="location">Build a better life for your fellow trojans</h1>
+		<h1 class="day">Day 1: March 25th</h1>
+			<h3 class="location">Location: King's Hall Main Area</h3>
+			<h4>Workshops will be happening throughout the day</h4>
+			<table>
+				<tr>
+					<th>10am:</th>
+					<th>Check-in begins</th>
+				</tr>
+				<tr>
+					<th>11am:</th>
+					<th>Welcome and introduction</th>
+				</tr>
+				<tr>
+					<th>11am:</th>
+					<th>Web development workshop</th>
+				</tr>
+				<tr>
+					<th>1pm:</th>
+					<th>Hacking begins and lunchtime</th>
+				</tr>
+				<tr>
+					<th>6pm:</th>
+					<th>Dinner</th>
+				</tr>
+				<tr>
+					<th>9pm:</th>
+					<th>Surprise snack</th>
+				</tr>
+				<tr>
+					<th>12am:</th>
+					<th>Room closes for the night</th>
+				</tr>
+			</table>
+		<h1 class="day">Day 2: March 26th</h1>
+			<h3 class="location">Location: TCC Forum</h3>
+						<table>
+				<tr>
+					<th>10am:</th>
+					<th>Back to hacking and brunch</th>
+				</tr>
+				<tr>
+					<th>12pm:</th>
+					<th>Hacking ends!</th>
+				</tr>
+				<tr>
+					<th>1pm:</th>
+					<th>Demos begin</th>
+				</tr>
+				<tr>
+					<th>2pm:</th>
+					<th>Winners revealed</th>
+				</tr>
+				<tr>
+					<th>3pm:</th>
+					<th>End hackathon</th>
+				</tr>
+			</table>
+	</section>
+	<section class="workshops text-center">
+		<h1>Workshops</h1>
+		<div class="ws-outer row">
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="ws-inner">
+					<h3>How to Hackathon</h3>
+					<img src="img/workshops/laptop.png" class="workshop-images">
+					<p>Thursday before the hackathon, we will be having a workshop to teach you the basics of not only how to survive a hackathon, but how to have a great and rewarding experience as well.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="ws-inner">
+					<h3>How to Web Development</h3>
+					<img src="img/workshops/web.png" class="workshop-images">
+					<p>Learn the fundamental skills of HTML/CSS and Javascript, so you can launch into making power web applications and websites for a versatile and boundless hack.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="ws-inner">
+					<h3>How to Unity and Chatbot</h3>
+					<img src="img/workshops/unity.png" class="workshop-images">
+					<p>Develop your skills in Unity Game Engine and learn more about how to create a chatbot, which are both useful tools to help you add to your a one-of-a-kind hack.</p>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2"></div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="ws-inner">
+					<h3>Google: How to Kick-start your career</h3>
+					<img src="img/workshops/google.svg" class="workshop-images">
+					<p>Learn from Google representatives how you can begin thinking about your career and set yourself up for a successful life as a software engineer.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="ws-inner">
+					<h3>How to Android/iOS</h3>
+					<img src="img/workshops/phone.png" class="workshop-images">
+					<p>Always have wanted to learn how to make a mobile application? Hack on one of the most widely-used platforms and learn more about developing on Android and iOS devices.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-2"></div>
 		</div>
-		
-	</div>
-	<h4 id="bottom" class="text-center">More information coming soon</h4>
+
+	</section>
+	<section class="prizes text-center">
+		<h1>Prizes</h1>
+		<div class="p-outer row">
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>1st Place</h2>
+					<h4>Drones</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>2nd Place</h2>
+					<h4>Fitbits</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>3nd Place</h2>
+					<h4>Chromecasts</h4>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-2"></div>
+
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>Best Web Hack</h2>
+					<h4>Amazon Gift Cards</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>Best Mobile Hack</h2>
+					<h4>USB Drives</h4>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-2"></div>
+
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>Best IoT/Hardware Hack</h2>
+					<h4>Amazon Echo Dots</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>Best Gaming/VR</h2>
+					<h4>Mechanical Keyboards</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="p-inner">
+					<h2>Tommy's Favorite</h2>
+					<h4>USC Bookstore Giftcard</h4>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="footer text-center">
+		<h4>Got any questions? Need a mentor? Wanna talk to an awesome person?</h4>
+		<h4>Reach out to the ACM E-Board through our Facebook Page!</h4>
+		<a href="https://www.facebook.com/uscacm/"><img class="link-icons" src="img/facebook-icon.png" ></a>
+		<h1>Hack On!</h1>
+		<h1 class="final-fight-on"><i class="fa fa-hand-peace-o"></i></h1>
+	
+	</section>
 	
 
 </body>
