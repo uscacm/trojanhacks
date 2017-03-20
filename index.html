@@ -16,11 +16,13 @@
 	<title>TrojanHacks pt.2</title>
 
 	<style>
+		.wrapper {
+			overflow-x: hidden;
+		}
 		body {
 			margin: 0;
 			padding: 0;
-			font-family: lato;
-			overflow-x: hidden;
+			font-family: avenir, lato;
 		}
 		.intro {
 			color: white;
@@ -87,7 +89,7 @@
 
 		}
 		.schedule {
-			padding: 50px 10px;
+			padding: 50px 35px;
 			color: black;
 			background-color: white;
 		}
@@ -186,11 +188,25 @@
 			transform: scale(1.1);
 		}
 
+		@media only screen and (max-width: 500px) {
+		    #title {
+		        font-size: 40px;
+		    }
+		    #slogan {
+		    	font-size: 25px;
+		    }
+		    #apply-button {
+		    	font-size: 18px;
+		    	padding: 10px 20px;
+		    }
+		}
+
 	</style>
 
 </head>
 
 <body>
+	<div class="wrapper">
 	<section class="intro text-center">
 		<section class="cover"></section>
 		<section class="top-info">
@@ -205,7 +221,6 @@
 		<h1 class="location">Build a better life for your fellow trojans</h1>
 		<h1 class="day">Day 1: March 25th</h1>
 			<h3 class="location">Location: King's Hall Main Area</h3>
-			<h4>Workshops will be happening throughout the day</h4>
 			<table>
 				<tr>
 					<th>9am:</th>
@@ -375,6 +390,7 @@
 		<h1 class="final-fight-on"><i class="fa fa-hand-peace-o"></i></h1>
 	
 	</section>
+	</div>
 	
 
 </body>
