@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" href="img/icon.png">
-	
-	
-
 	<script src="https://use.fontawesome.com/dbc214e8dd.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-	<title>TrojanHacks pt.2</title>
+	<title>TrojanHacks</title>
 
 	<style>
 		.wrapper {
@@ -52,9 +49,14 @@
 			position: fixed;
 			height: 100%;
 			width: 100%;
-			background: url('img/la.jpeg') center no-repeat;
-			background-size: cover;
 			z-index: -1;
+		}
+		.cover img {
+			position: absolute;
+			height: 110%;
+			top: -10px;
+			left: -10px;
+			filter: blur(5px);
 		}
 		#presents {
 			margin-top: 0;
@@ -89,7 +91,7 @@
 
 		}
 		.schedule {
-			padding: 50px 35px;
+			padding: 100px 35px;
 			color: black;
 			background-color: white;
 		}
@@ -113,12 +115,12 @@
 		}
 		.workshops {
 			margin-top: 75px;
-			padding: 50px 10px;
+			padding: 100px 10px;
 			color: white;
 			background: red; 
-			background: -webkit-linear-gradient(top left, #DB7737, #56243B);
-			background: -o-linear-gradient(top left, #DB8156, #56243B);
-			background: linear-gradient(top bottom right, #DB8156, #56243B);
+			background: -webkit-linear-gradient(top left, #7C0002, #320400);
+			background: -o-linear-gradient(top left, #7C0002, #320400);
+			background: linear-gradient(top bottom right, #7C0002, #320400);
 		}
 		.ws-inner {
 			padding: 10px;
@@ -147,18 +149,12 @@
 		.prizes {
 			margin-top: 75px;
 			background-color: white;
-			padding: 50px 20px;
-		}
-		.p-outer {
-			margin-top: 20px;
-			margin-bottom:70px;
-			background-color: #C56541;
-			height: 350px;
-
+			padding: 100px 20px;
+			margin-bottom: 200px;
 		}
 		.p-inner {
 			padding: 15px;
-			background-color: #C56541;
+			background-color: #8F0505;
 			border: 20px solid white;
 			margin: -10px -35px;
 			height:200px;
@@ -169,7 +165,7 @@
 			margin-top: 75px;
 			padding: 100px 10px;
 			padding-bottom: 300px;
-			background-color: #3F2E48;
+			background-color: #550401;
 			color: white;
 		}
 
@@ -177,7 +173,7 @@
 			font-size: 80px;
 		}
 		.p-inner:hover {
-			background-color: #AA4A2B;
+			background-color: #BB332B;
 		}
 
 		.link-icons {
@@ -208,10 +204,10 @@
 <body>
 	<div class="wrapper">
 	<section class="intro text-center">
-		<section class="cover"></section>
+		<section class="cover"><img src="http://gero.usc.edu/wp-content/uploads/2015/07/campus-wide.jpg"></section>
 		<section class="top-info">
 			<h3 id="presents">USC ACM Presents...</h3>
-			<h1 id="title"><b>TrojanHacks Pt. </b><i class="fa fa-hand-peace-o"></i></h1>
+			<h1 id="title"><b>TrojanHacks</b><i class="fa fa-hand-peace-o"></i></h1>
 			<h2 id="slogan"><b>"Hack on, for ol' SC"</b></h2>
 			<a id="apply-button" href="https://uscacm.typeform.com/to/Ob0THW" type="button">Apply Now</a>
 		</section>
@@ -219,7 +215,7 @@
 
 	<section class="schedule text-center">
 		<h1 class="location">Build a better life for your fellow trojans</h1>
-		<h1 class="day">Day 1: March 25th</h1>
+		<h1 class="day">Day 1: September 23rd</h1>
 			<h3 class="location">Location: King's Hall Main Area</h3>
 			<table>
 				<tr>
@@ -255,7 +251,7 @@
 					<th>Room closes for the night</th>
 				</tr>
 			</table>
-		<h1 class="day">Day 2: March 26th</h1>
+		<h1 class="day">Day 2: September 24th</h1>
 			<h3 class="location">Location: TCC Forum</h3>
 						<table>
 				<tr>
@@ -283,32 +279,11 @@
 	<section class="workshops text-center">
 		<h1>Workshops</h1>
 		<div class="ws-outer row">
-			<div class="col-lg-4 col-md-4 col-sm-6">
-				<div class="ws-inner">
-					<h3>How to Hackathon</h3>
-					<img src="img/workshops/laptop.png" class="workshop-images">
-					<p>Thursday before the hackathon, we will be having a workshop to teach you the basics of not only how to survive a hackathon, but how to have a great and rewarding experience as well. Learn from the best and have successful future hackathons!</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6">
-				<div class="ws-inner">
-					<h3>Google: How to Kick-start your career</h3>
-					<img src="img/workshops/google.svg" class="workshop-images">
-					<p>Hear from Google representatives about how you can set yourself up for a successful career as a software engineer and learn insider information from a seasoned professional that is working for an industry-leading company themselves!</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="col-lg-3 col-md-3 col-sm-6">
 				<div class="ws-inner">
 					<h3>How to Web Development</h3>
 					<img src="img/workshops/web.png" class="workshop-images">
 					<p>Learn the fundamental skills of HTML/CSS and Javascript, so you can launch into making power web applications and websites for a versatile and boundless hack that anyone can access and share from their laptops.</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6">
-				<div class="ws-inner">
-					<h3>How to Unity</h3>
-					<img src="img/workshops/unity.png" class="workshop-images">
-					<p>Advance your skills in Unity Game Engine and learn the fundamentals of game development so you can begin to create and imagine your own games.</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6">
@@ -337,17 +312,16 @@
 	</section>
 	<section class="prizes text-center">
 		<h1>Prizes</h1>
-		<div class="p-outer row">
 			<div class="col-lg-4 col-md-4">
 				<div class="p-inner">
 					<h2>1st Place</h2>
-					<h4>Drones</h4>
+					<h4>Solar-panel Backpacks</h4>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="p-inner">
 					<h2>2nd Place</h2>
-					<h4>Fitbits</h4>
+					<h4>Echo Dots</h4>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
@@ -356,27 +330,6 @@
 					<h4>Chromecasts</h4>
 				</div>
 			</div>
-
-			<div class="col-lg-4 col-md-4">
-				<div class="p-inner">
-					<h2>Best AI</h2>
-					<h4>Amazon Echo Dots</h4>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="p-inner">
-					<h2>Best Mobile</h2>
-					<h4>Amazon Gift Cards</h4>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="p-inner">
-					<h2>Most Viable Startup</h2>
-					<h4>Mechanical Keyboards</h4>
-				</div>
-			</div>
-
-		</div>
 	</section>
 	<section class="footer text-center">
 		<h4>Got any questions? Need a mentor? Wanna talk to an awesome person?</h4>
@@ -387,7 +340,24 @@
 	
 	</section>
 	</div>
-	
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+<!-- 	  <script>
+	  	$(document).ready(function() {
+	  		$(window).scroll(function (event) {
+			    var scroll = $(window).scrollTop();
+			    console.log(scroll)
+		  		if (scroll > 100) {
+		  			$(".cover img").css("filter", "blur(5px)");
+		  		}
+		  		else {
+		  			$(".cover img").css("filter", "blur(0px)");
+		  		}
+			});
+	  	})
+	  </script> -->
 
 </body>
 </html>
